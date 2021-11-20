@@ -9,9 +9,11 @@ def gradeTranslator(user)  :
    
       user = int(user)#convert input to int
       user = (user // 10) * 10#round to nearest 10s place
-      
-      if(user < 50) :#check if input is less than 50 
+      #checks for special cases and adjust accordingly, in programs with alot of special cases this would be its own function
+      if(user < 50) : 
          user = 50
+      elif(user >= 100) ;
+         user = 90
          
       return [grades[score.index(user)]] #returns result as a list
       
@@ -21,7 +23,7 @@ def gradeTranslator(user)  :
       user = user.upper()#converts string to all uppercase characters
       upperbound = score[grades.index(user)] + 9 # finds the upper bound of all possible scores
       lowerbound = score[grades.index(user)]
-      #checks for special cases and adjust accordingly, in programs with alot of special cases this would be its own function
+      #another special case check
       if (user == 'A') :
           upperbound += 1
       elif (user == 'F') :
