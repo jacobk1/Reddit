@@ -25,7 +25,7 @@ def gradeTranslator(user)  :
       lowerbound = score[grades.index(user)]
       #another special case check
       if (user == 'A') :
-          upperbound += 1
+         upperbound += 1
       elif (user == 'F') :
          lowerbound = 0
          
