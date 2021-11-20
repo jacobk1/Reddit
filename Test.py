@@ -2,7 +2,7 @@ def gradeTranslator(user)  :
 #pair of list storing data
    grades = ['A','B','C','D','F']
    score = [90,80,70,60,50]
-   user = str(user)
+   user = str(user) #convert to string so I can use .isnumeric() later
    
    #checks input type
    if (user.isnumeric()) :
@@ -12,7 +12,7 @@ def gradeTranslator(user)  :
       #checks for special cases and adjust accordingly, in programs with alot of special cases this would be its own function
       if(user < 50) : 
          user = 50
-      elif(user >= 100) ;
+      elif(user >= 100) :
          user = 90
          
       return [grades[score.index(user)]] #returns result as a list
